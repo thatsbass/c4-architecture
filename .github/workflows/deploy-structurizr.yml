@@ -1,0 +1,33 @@
+name: Deploy Structurizr DSL to Structurizr
+
+on:
+  push:
+    branches: [main] 
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Download Structurizr CLI
+        run: |
+          wget https://github.com/structurizr/cli/releases/download/v1.36.0/structurizr-cli.zip
+          unzip structurizr-cli.zip -d structurizr-cli
+          chmod +x structurizr-cli/structurizr.sh
+
+      - name: Push to Structurizr
+        run: |
+          ./structurizr-cli/structurizr.sh push \
+            -id ${{ secrets.STRUCTURIZR_WORKSPACE_ID }} \
+            -key ${{ secrets.STRUCTURIZR_API_KEY }} \
+            -secret ${{ secrets.STRUCTURIZR_API_SECRET }} \
+            -workspace workspace.dsl
