@@ -6,7 +6,7 @@ styles {
         background #08427b
     }
 
-    element "Customer" {
+    element "user" {
         background #08427b
     }
 

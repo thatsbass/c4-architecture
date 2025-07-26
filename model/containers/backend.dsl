@@ -2,11 +2,11 @@
 apiBackend = container "API Backend" "API REST gérant la logique métier" "Node.js/NestJS" {
     # Infrastructure
     apiGateway = component "API Gateway" "Point d'entrée et routage" "NestJS Gateway"
-    
+
     # Authentification et sécurité
+    # securityModule = component "Module Sécurité" "Logging, audit, validation" "NestJS Module"
     authModule = component "Module Authentification" "JWT, sessions, RBAC" "NestJS Module"
-    securityModule = component "Module Sécurité" "Logging, audit, validation" "NestJS Module"
-    
+
     # Modules métier
     userModule = component "Module Utilisateurs" "Gestion des profils utilisateurs" "NestJS Module"
     tenantModule = component "Module Multitenancy" "Gestion des tenants et white-label" "NestJS Module"
@@ -16,7 +16,7 @@ apiBackend = container "API Backend" "API REST gérant la logique métier" "Node
     paymentModule = component "Module Paiements" "Intégration paiements et facturation" "NestJS Module"
     feedbackModule = component "Module Feedback" "Avis et évaluations" "NestJS Module"
     notificationModule = component "Module Notifications" "Email, SMS, push" "NestJS Module"
-    
+
     # Services transversaux
     validationService = component "Service Validation" "Validation des données métier" "NestJS Service"
     auditService = component "Service Audit" "Traçabilité des actions" "NestJS Service"
