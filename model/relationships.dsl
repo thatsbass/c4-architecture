@@ -1,7 +1,7 @@
 # Relations entre personnes et systèmes
-customer -> reservationPlatform "Utilise pour effectuer des réservations" "HTTPS"
-admin -> reservationPlatform "Gère son tenant et ses utilisateurs" "HTTPS" 
-superadmin -> reservationPlatform "Administre tous les tenants" "HTTPS" 
+user -> reservationPlatform "Utilise pour effectuer des réservations" "HTTPS"
+admin -> reservationPlatform "Gère son tenant et ses utilisateurs" "HTTPS"
+superadmin -> reservationPlatform "Administre tous les tenants" "HTTPS"
 
 # Relations avec systèmes externes
 reservationPlatform -> paymentSystem "Traite les paiements" "HTTPS/JSON"
@@ -10,7 +10,7 @@ reservationPlatform -> smsSystem "Envoie des notifications SMS" "HTTPS/JSON"
 reservationPlatform -> storageSystem "Stocke et récupère les fichiers" "HTTPS"
 
 # Relations entre conteneurs
-customer -> webApp "Utilise" "HTTPS"
+user -> webApp "Utilise" "HTTPS"
 admin -> webApp "Utilise" "HTTPS"
 superadmin -> webApp "Utilise" "HTTPS"
 webApp -> apiBackend "Appels API" "JSON/HTTPS"
