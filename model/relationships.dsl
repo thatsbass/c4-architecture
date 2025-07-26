@@ -1,7 +1,7 @@
 # Relations entre personnes et systèmes
 customer -> reservationPlatform "Utilise pour effectuer des réservations" "HTTPS"
-admin -> reservationPlatform "Gère son tenant et ses utilisateurs" "HTTPS"
-superadmin -> reservationPlatform "Administre tous les tenants" "HTTPS"
+admin -> reservationPlatform "Gère son tenant et ses utilisateurs" "HTTPS" 
+superadmin -> reservationPlatform "Administre tous les tenants" "HTTPS" 
 
 # Relations avec systèmes externes
 reservationPlatform -> paymentSystem "Traite les paiements" "HTTPS/JSON"
@@ -39,9 +39,7 @@ apiGateway -> feedbackModule "Gestion feedback"
 # Relations avec le cache
 authModule -> sessionCache "Stocke les sessions"
 chatModule -> messageQueue "Publie les messages temps réel"
-userModule -> userCache "Cache les données utilisateurs"
-listingModule -> listingCache "Cache les annonces"
-apiGateway -> rateLimitCache "Vérifie les limites de taux"
+
 
 # Relations avec la base de données
 userModule -> usersTable "CRUD utilisateurs"
