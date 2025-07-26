@@ -1,7 +1,7 @@
-# Architecture C4 - Plateforme de Réservation
+# Architecture C4 - Plateforme de Cynoia Space
 
 ## Description
-Architecture d'une plateforme de réservation multi-tenant avec PWA, chat temps réel, paiements et système de feedback.
+Architecture d'une plateforme de l'espace Cynoia multi-tenant avec PWA, chat temps réel, paiements et système de feedback.
 
 ## Structure des fichiers
 - `workspace.dsl` : Fichier principal
@@ -20,6 +20,3 @@ Architecture d'une plateforme de réservation multi-tenant avec PWA, chat temps 
 ```bash
 # Avec Structurizr CLI
 structurizr-cli push -workspace workspace.dsl
-
-# Avec Docker
-docker run -it --rm -v $(pwd):/usr/local/structurizr structurizr/cli push -workspace workspace.dsl
