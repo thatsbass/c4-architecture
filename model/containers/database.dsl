@@ -8,8 +8,7 @@ database = container "Base de Données" "Stockage des données multi-tenants" "P
     paymentsTable = component "Table Payments" "Transactions" "PostgreSQL Table"
     feedbackTable = component "Table Feedback" "Avis clients" "PostgreSQL Table"
     listingsTable = component "Table Listings" "Annonces" "PostgreSQL Table"
-    
+
     # Tables système
     auditTable = component "Table Audit" "Logs d'audit" "PostgreSQL Table"
-    migrationsTable = component "Table Migrations" "Historique des migrations" "PostgreSQL Table"
 }
