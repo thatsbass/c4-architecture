@@ -2,6 +2,7 @@
 webApp = container "Application Web PWA" "Progressive Web App responsive et multilingue" "React/Next.js" {
     # Composants UI
     uiComponents = component "Composants UI" "Interface utilisateur responsive" "React Components"
+    uiComponentsSuperAdmin = component "Composants UI Admin" "Panel Super Utilisateur responsive" "React Components"
     serviceWorker = component "Service Worker" "Cache offline et synchronisation" "Service Worker API"
     
     # Authentification

@@ -13,16 +13,18 @@ reservationPlatform -> storageSystem "Stocke et récupère les fichiers" "HTTPS"
 customer -> webApp "Utilise" "HTTPS"
 admin -> webApp "Utilise" "HTTPS"
 superadmin -> webApp "Utilise" "HTTPS"
-
 webApp -> apiBackend "Appels API" "JSON/HTTPS"
 apiBackend -> database "Lecture/Écriture des données" "SQL/TCP"
 apiBackend -> cache "Cache et sessions" "Redis Protocol"
 
 # Relations Frontend
 uiComponents -> apiClient "Utilise pour les appels API"
+uiComponentsSuperAdmin -> apiClient "Utilise pour les appels API"
+
 authClient -> apiClient "Authentifie les requêtes"
 serviceWorker -> apiClient "Cache les réponses"
 i18n -> uiComponents "Fournit les traductions"
+i18n -> uiComponentsSuperAdmin "Fournit les traductions"
 pushNotifications -> serviceWorker "Utilise pour les notifications"
 offlineSync -> apiClient "Synchronise les données"
 
@@ -35,7 +37,7 @@ apiGateway -> chatModule "Gestion chat"
 apiGateway -> listingModule "Gestion annonces"
 apiGateway -> paymentModule "Gestion paiements"
 apiGateway -> feedbackModule "Gestion feedback"
-
+userModule -> userCache "Cache les données utilisateurs"
 # Relations avec le cache
 authModule -> sessionCache "Stocke les sessions"
 chatModule -> messageQueue "Publie les messages temps réel"
