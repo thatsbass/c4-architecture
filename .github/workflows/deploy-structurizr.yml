@@ -20,7 +20,7 @@ jobs:
 
       - name: Download Structurizr CLI
         run: |
-          wget https://github.com/structurizr/cli/releases/download/v1.36.0/structurizr-cli.zip
+          wget https://github.com/structurizr/cli/releases/latest/download/structurizr-cli.zip
           unzip structurizr-cli.zip -d structurizr-cli
           chmod +x structurizr-cli/structurizr.sh
 
