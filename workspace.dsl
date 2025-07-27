@@ -6,6 +6,7 @@ workspace "Plateforme de Cynoia Space" "Architecture d'une plateforme dédiée a
 
         # Système principal
         reservationPlatform = softwareSystem "Plateforme de Cynoia" "Système d'une plateforme multi-tenant avec chat, paiements et feedback" {
+        tag "cynoia-system
 
             !include model/containers/frontend.dsl
             !include model/containers/backend.dsl
