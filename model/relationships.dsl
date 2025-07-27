@@ -37,10 +37,8 @@ apiGateway -> chatModule "Gestion chat"
 apiGateway -> listingModule "Gestion annonces"
 apiGateway -> paymentModule "Gestion paiements"
 apiGateway -> feedbackModule "Gestion feedback"
-userModule -> userCache "Cache les données utilisateurs"
-# Relations avec le cache
-authModule -> sessionCache "Stocke les sessions"
-chatModule -> messageQueue "Publie les messages temps réel"
+
+
 
 
 # Relations avec la base de données
@@ -48,10 +46,11 @@ userModule -> usersTable "CRUD utilisateurs"
 tenantModule -> tenantsTable "CRUD tenants"
 bookingModule -> bookingsTable "CRUD réservations"
 chatModule -> messagesTable "CRUD messages"
-paymentModule -> paymentsTable "CRUD paiements"
+auditService -> auditTable "Enregistre les logs d'audit"
 feedbackModule -> feedbackTable "CRUD feedback"
 listingModule -> listingsTable "CRUD annonces"
-auditService -> auditTable "Enregistre les logs d'audit"
+paymentModule -> paymentsTable "CRUD paiements"
+
 
 # Relations avec systèmes externes
 paymentModule -> paymentSystem "Traite les paiements"

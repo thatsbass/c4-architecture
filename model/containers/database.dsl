@@ -1,6 +1,6 @@
 # Base de données PostgreSQL
 database = container "Base de Données" "Stockage des données multi-tenants" "PostgreSQL" {
-    tag "Database"
+    tag "database"
     # Tables principales
     tenantsTable = component "Table Tenants" "Configuration des tenants" "PostgreSQL Table"
     usersTable = component "Table Users" "Données utilisateurs" "PostgreSQL Table"
