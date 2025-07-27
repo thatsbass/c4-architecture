@@ -4,9 +4,7 @@
                 fontSize 22
                 shape Person
                 background #D1D1D1
-
             }
-
 
             element "External System" {
                 background #EBD6FB
